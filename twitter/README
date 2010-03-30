@@ -1,0 +1,9 @@
+A twitter-like microblogging platform implemented in django.
+
+	- Install Django.
+	- Get into the twitter directory and run this command
+		
+		python manage.py runserver
+	- Open your web browser and paste this to your link
+		
+		http://127.0.0.1:8000/login/ 

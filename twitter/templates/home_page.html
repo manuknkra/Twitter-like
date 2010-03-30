@@ -1,0 +1,31 @@
+<html>
+<body>
+<p>
+<a href="http://127.0.0.1:8000/logout/">Logout</a>
+||
+<a href="http://127.0.0.1:8000/following/{{username}}">Following</a>
+||
+<a href="http://127.0.0.1:8000/followers/{{username}}">Followers</a>
+</p>
+
+    <form  action=" " method="POST">
+        <table>
+            {{ form.as_table}}
+        </table>
+        <p><input type="submit"  value="Tweet"></p>
+    </form>
+
+{% for name in tweets_by %}
+<p>---------------------------------------</p>
+	<p><a href = "http://127.0.0.1:8000/user_page/{{ name }}">{{name}}</a> ||
+	{% for tweet in tweets %}
+		{% ifequal forloop.counter forloop.parentloop.counter %}
+                        {{tweet}}
+                {% endifequal %}
+        {% endfor %}
+
+	</p>
+{% endfor %}
+
+</body>
+</html>
